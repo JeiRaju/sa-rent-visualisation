@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SA Suburb Rent Trends (2024)</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- 
+    IMPORTANT:
+    This visualisation uses d3.json() to load external JSON data.
+    Most browsers will block this if you open index.html directly.
+    Instead, run it using a local server by accessing via: http://localhost:8000
+  -->
+</head>
+<body>
+  <h1>South Australia Median Rent by Suburb (2024)</h1>
+
+  <div id="chart-container">
+    <svg width="960" height="600"></svg>
+  </div>
+
+  <div id="dropdown-container">
+    <label for="quarterSelect">Select Quarter:</label>
+    <select id="quarterSelect">
+      <option value="Q1-2024">Q1 2024</option>
+      <option value="Q2-2024">Q2 2024</option>
+      <option value="Q3-2024">Q3 2024</option>
+      <option value="Q4-2024">Q4 2024</option>
+    </select>
+  </div>
+  <!-- D3.js from CDN -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- 
+    DATA SOURCE, INSIGHTS COMMENTS AND REFERENCE LIST
+
+    Data Source:
+    The visualisation is based on the 2024 quarterly Private Rental Reports from [https://data.sa.gov.au], specifically the "Suburb" sheets. 
+    It includes median weekly rent values extracted for South Australian suburbs across Q1–Q4 2024, derived from rental bond lodgements.
+
+    Observations:
+    - Rent values vary significantly across suburbs. Inner-city areas such as Adelaide and coastal suburbs consistently show higher rent prices.
+    - There is a noticeable upward trend in median rent in many suburbs as the quarters progress, suggesting tightening rental supply or increased demand.
+    - Some regional or outer-metro suburbs show lower but more stable pricing.
+    - The visualisation allows quick comparison of the top 20 suburbs per quarter using an animated bar chart with dropdown interactivity.
+
+    References:
+    - Government of South Australia. (2024). Private rental report – South Australia (2024 quarterly data) [Dataset]. Data SA. Retrieved from https://data.sa.gov.au/data/dataset/private-rent-report
+    - Bostock, M. (n.d.). Bar Chart (D3 Example). Observable. Retrieved May 29, 2025, from https://observablehq.com/@d3/bar-chart/2
+    - D3.js. (n.d.). d3-axis – Axes for visualizing scales. GitHub. Retrieved May 29, 2025, from https://d3js.org/d3-axis
+    - D3.js. (n.d.). d3-transition – Smooth animated transitions. D3.js. Retrieved May 29, 2025, from https://d3js.org/d3-transition
+    - D3.js. (n.d.). d3-selection – Select and manipulate elements. D3.js. Retrieved May 29, 2025, from https://d3js.org/d3-selection
+-->
